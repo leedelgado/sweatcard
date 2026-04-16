@@ -1,0 +1,135 @@
+/* Outer wrapper traces the card + outline shape for drop-shadow */
+.wrapper {
+  display: inline-block;
+  filter: drop-shadow(-8px 10px 32px rgba(0, 0, 0, 0.26))
+          drop-shadow(-4px 5px 10px rgba(0, 0, 0, 0.15));
+}
+
+.card {
+  background: #1C1C1E;
+  border-radius: 40px;
+  width: 390px;
+  padding: 22px 22px 20px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', sans-serif;
+  outline: 12px solid #ffffff;
+}
+
+/* ── Header ──────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.iconWrap {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconEmoji {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.titleGroup {
+  flex: 1;
+  min-width: 0;
+}
+
+.workoutType {
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 3px;
+  line-height: 1.2;
+}
+
+.metaTime {
+  font-size: 13px;
+  font-weight: 400;
+  color: #AEAEB2;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ── Section label ───────────────────────────────────── */
+.sectionLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+/* ── Stat grid — blends into card bg, dividers only ──── */
+.statContainer {
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.statRow {
+  display: flex;
+  border-bottom: 1px solid #3A3A3C;
+}
+
+.statRow:last-child {
+  border-bottom: none;
+}
+
+.statCell {
+  flex: 1;
+  padding: 12px 0;
+}
+
+.statCellLeft {
+  padding-right: 16px;
+  border-right: 1px solid #3A3A3C;
+}
+
+.statCellRight {
+  padding-left: 16px;
+}
+
+.statLabel {
+  font-size: 11px;
+  font-weight: 400;
+  color: #AEAEB2;
+  margin: 0 0 4px;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.statUnit {
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 1px;
+}
+
+/* ── Footer ──────────────────────────────────────────── */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #3A3A3C;
+}
+
+.appName {
+  font-size: 10px;
+  font-weight: 400;
+  color: #AEAEB2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}

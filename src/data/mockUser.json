@@ -1,0 +1,39 @@
+{
+  "userId": "user_abc123",
+  "displayName": "Lee",
+  "instagramHandle": "@leenyc",
+  "tiktokHandle": "@leenyc",
+  "joinedDate": "2026-04-12T00:00:00Z",
+  "totalWorkouts": 47,
+  "streakDays": 12,
+  "workoutHistory": [],
+  "achievements": [
+    {
+      "id": "streak_12",
+      "type": "streak",
+      "label": "Move Streak",
+      "value": "12",
+      "unit": "days",
+      "icon": "flame",
+      "earnedDate": "2026-04-12T00:00:00Z"
+    },
+    {
+      "id": "workouts_47",
+      "type": "milestone",
+      "label": "Workouts",
+      "value": "47",
+      "unit": "total",
+      "icon": "dumbbell",
+      "earnedDate": "2026-04-12T00:00:00Z"
+    },
+    {
+      "id": "pr_calories",
+      "type": "record",
+      "label": "Best Calories",
+      "value": "382",
+      "unit": "cal",
+      "icon": "bolt",
+      "earnedDate": "2026-04-12T00:00:00Z"
+    }
+  ]
+}

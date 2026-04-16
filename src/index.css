@@ -1,0 +1,19 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  /* Subtle side shadow on desktop so it reads as a phone frame */
+  box-shadow: 0 0 0 1px #1a1a1a, 0 0 60px rgba(0,0,0,0.8);
+  min-height: 100vh;
+}

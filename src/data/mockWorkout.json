@@ -1,0 +1,15 @@
+{
+  "id": "workout_001",
+  "userId": "user_abc123",
+  "workoutType": "Traditional Strength Training",
+  "workoutTypeKey": "strength",
+  "startDate": "2026-04-12T07:20:00Z",
+  "endDate": "2026-04-12T08:37:30Z",
+  "durationSeconds": 4650,
+  "activeCalories": 426,
+  "totalCalories": 524,
+  "avgHeartRate": 120,
+  "maxHeartRate": 158,
+  "totalDistanceMiles": 0,
+  "source": "Apple Watch Series 9"
+}

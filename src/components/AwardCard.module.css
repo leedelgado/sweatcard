@@ -1,0 +1,81 @@
+/* Same sticker shell as StickerCard */
+.wrapper {
+  display: inline-block;
+  filter: drop-shadow(-8px 10px 32px rgba(0, 0, 0, 0.26))
+          drop-shadow(-4px 5px 10px rgba(0, 0, 0, 0.15));
+}
+
+.card {
+  background: #1C1C1E;
+  border-radius: 40px;
+  width: 390px;
+  padding: 40px 28px 24px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', sans-serif;
+  outline: 12px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+/* ── Emoji ───────────────────────────────────────────── */
+.emojiWrap {
+  width: 90px;
+  height: 90px;
+  background: #2C2C2E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emoji {
+  font-size: 44px;
+  line-height: 1;
+}
+
+/* ── Text ────────────────────────────────────────────── */
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.description {
+  font-size: 13px;
+  font-weight: 400;
+  color: #AEAEB2;
+  margin: 0;
+  line-height: 1.4;
+  max-width: 280px;
+}
+
+/* ── Footer ──────────────────────────────────────────── */
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 1px solid #3A3A3C;
+}
+
+.appName {
+  font-size: 10px;
+  font-weight: 400;
+  color: #AEAEB2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 400;
+  color: #636366;
+}

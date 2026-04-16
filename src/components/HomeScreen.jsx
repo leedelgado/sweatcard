@@ -1,0 +1,37 @@
+import styles from './HomeScreen.module.css';
+import StickerCard from './StickerCard';
+import AwardCard from './AwardCard';
+import ScaledCard from './ScaledCard';
+
+function buildFeed(workouts, awards) {
+  const items = [
+    ...workouts.map((w) => ({ type: 'workout', id: w.id, date: w.startDate,  data: w })),
+    ...awards.map((a)   => ({ type: 'award',   id: a.id, date: a.earnedDate, data: a })),
+  ];
+  return items.sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
+export default function HomeScreen({ workouts, awards, onSelect }) {
+  const feed = buildFeed(workouts, awards);
+
+  return (
+    <main className={styles.screen}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>Sessions</h1>
+      </header>
+
+      <div className={styles.grid}>
+        {feed.map((item) => (
+          <button key={item.id} className={styles.cell} onClick={() => onSelect(item)}>
+            <ScaledCard>
+              {item.type === 'workout'
+                ? <StickerCard workout={item.data} />
+                : <AwardCard   award={item.data}   />
+              }
+            </ScaledCard>
+          </button>
+        ))}
+      </div>
+    </main>
+  );
+}

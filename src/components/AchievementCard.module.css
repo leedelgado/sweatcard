@@ -1,0 +1,118 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 16px 48px rgba(0, 0, 0, 0.85)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+.card {
+  background: #1C1C1E;
+  border-radius: 20px;
+  width: 390px;
+  padding: 20px 22px 22px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', sans-serif;
+  position: relative;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% calc(100% - 38px),
+    calc(100% - 38px) 100%,
+    0% 100%
+  );
+}
+
+.peel {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(225deg, #3A3A3C 0%, #2C2C2E 100%);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+  filter: drop-shadow(-3px -3px 6px rgba(0, 0, 0, 0.6));
+}
+
+.sectionLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8E8E93;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.badge {
+  background: #2C2C2E;
+  border-radius: 14px;
+  padding: 16px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.badgeIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.badgeIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Icon background colors by type */
+.badgeIcon.streak {
+  background: rgba(255, 159, 10, 0.15);
+}
+.badgeIcon.streak svg {
+  fill: #FF9F0A;
+}
+
+.badgeIcon.milestone {
+  background: rgba(48, 209, 88, 0.15);
+}
+.badgeIcon.milestone svg {
+  fill: #30D158;
+}
+
+.badgeIcon.record {
+  background: rgba(94, 92, 230, 0.15);
+}
+.badgeIcon.record svg {
+  fill: #5E5CE6;
+}
+
+.badgeValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+  line-height: 1;
+}
+
+.badgeUnit {
+  font-size: 10px;
+  font-weight: 500;
+  color: #8E8E93;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badgeLabel {
+  font-size: 11px;
+  font-weight: 400;
+  color: #636366;
+}
