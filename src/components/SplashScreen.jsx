@@ -51,7 +51,6 @@ export default function SplashScreen({ onDone }) {
             onError={(e) => { e.target.style.display = 'none'; }}
           />
         ))}
-        <div className={styles.gradient} />
       </div>
 
       {/* Content pinned to bottom */}

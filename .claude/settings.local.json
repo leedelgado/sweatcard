@@ -15,7 +15,8 @@
       "Bash(git remote:*)",
       "Bash(git push:*)",
       "Bash(git commit -m 'Add hero images for splash screen slideshow *)",
-      "Bash(git commit -m 'Add text shadow to splash screen text for readability over photos *)"
+      "Bash(git commit -m 'Add text shadow to splash screen text for readability over photos *)",
+      "Bash(git commit -m 'Remove gradient overlay from splash — text shadow only *)"
     ]
   }
 }
