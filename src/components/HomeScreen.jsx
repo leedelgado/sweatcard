@@ -78,8 +78,9 @@ export default function HomeScreen({ workouts, awards, onSelect }) {
             {syncState === 'done'    && '✓ Up to date'}
           </button>
         </div>
-        <h1 className={styles.title}>Sessions</h1>
       </header>
+
+      <h1 className={styles.title}>Sessions</h1>
 
       <Section label="Today"   items={todayItems} onSelect={onSelect} />
       <Section label="Past"    items={pastItems}  onSelect={onSelect} />
