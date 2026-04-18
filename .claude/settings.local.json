@@ -22,7 +22,8 @@
       "WebFetch(domain:docs.google.com)",
       "WebFetch(domain:doc-00-bk-docstext.googleusercontent.com)",
       "Bash(git commit -m 'Rename SweatCard to Stat Shot throughout *)",
-      "Bash(git commit -m 'Rebrand to StatShot with custom wordmark component *)"
+      "Bash(git commit -m 'Rebrand to StatShot with custom wordmark component *)",
+      "Bash(git commit -m 'Slow splash slideshow + move text to top left *)"
     ]
   }
 }

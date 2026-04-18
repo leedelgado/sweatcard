@@ -3,11 +3,11 @@ import styles from './SplashScreen.module.css';
 import WordMark from './WordMark';
 
 const IMAGES = ['/hero1.png', '/hero2.png', '/hero3.png'];
-const SLIDE_DURATION = 1600;
-const FADE_DURATION  = 600;
+const SLIDE_DURATION = 3000;
+const FADE_DURATION  = 800;
 const TOTAL_STAY     = IMAGES.length * (SLIDE_DURATION + FADE_DURATION);
-const FADE_OUT_START = TOTAL_STAY + 400;
-const DONE_DELAY     = FADE_OUT_START + 500;
+const FADE_OUT_START = TOTAL_STAY + 600;
+const DONE_DELAY     = FADE_OUT_START + 600;
 
 export default function SplashScreen({ onDone }) {
   const [activeIdx, setActiveIdx] = useState(0);
