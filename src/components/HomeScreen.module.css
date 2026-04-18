@@ -11,6 +11,13 @@
   padding: 0 16px;
 }
 
+.headerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
 .title {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
   font-size: 30px;
@@ -18,6 +25,49 @@
   color: #f0f0f0;
   margin: 0;
   letter-spacing: -0.6px;
+}
+
+/* ── Sync button ─────────────────────────────────────── */
+.syncBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #1C1C1E;
+  border: 1px solid #3A3A3C;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #AEAEB2;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.syncBtn.syncing {
+  color: #636366;
+  cursor: default;
+}
+
+.syncBtn.done {
+  color: #1D9E75;
+  border-color: #1D9E75;
+}
+
+/* Spinning indicator */
+.spinner {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid #48484A;
+  border-top-color: #AEAEB2;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
 /* Masonry 2-column layout */

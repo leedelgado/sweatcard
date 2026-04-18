@@ -25,7 +25,8 @@
       "Bash(git commit -m 'Rebrand to StatShot with custom wordmark component *)",
       "Bash(git commit -m 'Slow splash slideshow + move text to top left *)",
       "Bash(git commit -m 'Make splash subtext bolder and fully opaque *)",
-      "Bash(git commit -m 'Add onboarding flow: HealthKit permission + social handles *)"
+      "Bash(git commit -m 'Add onboarding flow: HealthKit permission + social handles *)",
+      "Bash(git commit -m 'Add Sync button to Sessions header + update onboarding *)"
     ]
   }
 }

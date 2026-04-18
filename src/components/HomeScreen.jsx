@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from './HomeScreen.module.css';
 import StickerCard from './StickerCard';
 import AwardCard from './AwardCard';
@@ -14,11 +15,33 @@ function buildFeed(workouts, awards) {
 
 export default function HomeScreen({ workouts, awards, onSelect }) {
   const feed = buildFeed(workouts, awards);
+  const [syncState, setSyncState] = useState('idle'); // idle | syncing | done
+
+  function handleSync() {
+    if (syncState !== 'idle') return;
+    setSyncState('syncing');
+    setTimeout(() => {
+      setSyncState('done');
+      setTimeout(() => setSyncState('idle'), 2500);
+    }, 1800);
+  }
 
   return (
     <main className={styles.screen}>
       <header className={styles.header}>
-        <WordMark size="md" />
+        <div className={styles.headerTop}>
+          <WordMark size="md" />
+          <button
+            className={`${styles.syncBtn} ${styles[syncState]}`}
+            onClick={handleSync}
+            disabled={syncState === 'syncing'}
+          >
+            {syncState === 'syncing' && <span className={styles.spinner} />}
+            {syncState === 'idle'    && '↻ Sync'}
+            {syncState === 'syncing' && 'Syncing…'}
+            {syncState === 'done'    && '✓ Up to date'}
+          </button>
+        </div>
         <h1 className={styles.title}>Sessions</h1>
       </header>
 
