@@ -3,12 +3,14 @@ import HomeScreen from './components/HomeScreen';
 import StickerCard from './components/StickerCard';
 import AwardCard from './components/AwardCard';
 import ScaledCard from './components/ScaledCard';
+import SplashScreen from './components/SplashScreen';
 import { useExport } from './hooks/useExport';
 import mockWorkouts from './data/mockWorkouts';
 import mockAwards from './data/mockAwards';
 import './App.css';
 
 export default function App() {
+  const [splashDone, setSplashDone] = useState(false);
   // selected = { type: 'workout'|'award', data: {...} }
   const [selected, setSelected] = useState(null);
 
@@ -17,6 +19,10 @@ export default function App() {
     copySticker,   copying,   copiedDone,
     error,
   } = useExport();
+
+  if (!splashDone) {
+    return <SplashScreen onDone={() => setSplashDone(true)} />;
+  }
 
   if (!selected) {
     return (
@@ -63,12 +69,8 @@ export default function App() {
 
         {error && <p className="export-error">{error}</p>}
 
-        {(copiedDone || savedDone) && (
-          <p className="cta-hint">
-            {copiedDone
-              ? 'Open Instagram → paste as sticker'
-              : 'Open Instagram → Story → sticker icon → Camera Roll'}
-          </p>
+        {savedDone && (
+          <p className="cta-hint">Open Instagram → Story → sticker icon → Camera Roll</p>
         )}
       </div>
     </main>

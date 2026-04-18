@@ -65,13 +65,26 @@ export function useExport() {
         throw new Error('not_supported');
       }
 
-      await navigator.clipboard.write([
-        new ClipboardItem({ 'image/png': getBlob(type, data) }),
-      ]);
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+      if (isSafari) {
+        // Safari iOS requires passing a Promise (not an awaited blob) to
+        // ClipboardItem so the write is registered on the user gesture immediately.
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'image/png': getBlob(type, data) }),
+        ]);
+      } else {
+        // Chrome / Firefox: resolve the blob first, then write.
+        const blob = await getBlob(type, data);
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'image/png': blob }),
+        ]);
+      }
 
       setCopiedDone(true);
       setTimeout(() => setCopiedDone(false), 3000);
     } catch (err) {
+      console.error('Clipboard error:', err);
       if (err.message === 'not_supported') {
         setError('Clipboard not supported — use Save to Camera Roll instead.');
       } else {
