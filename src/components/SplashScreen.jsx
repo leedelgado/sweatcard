@@ -3,8 +3,8 @@ import styles from './SplashScreen.module.css';
 import WordMark from './WordMark';
 
 const IMAGES = ['/hero1.png', '/hero2.png', '/hero3.png', '/hero4.png'];
-const SLIDE_DURATION = 3000;  // ms each image is fully visible
-const FADE_DURATION  = 800;   // ms crossfade
+const SLIDE_DURATION = 1800;  // ms each image is fully visible
+const FADE_DURATION  = 600;   // ms crossfade
 const SLIDE_INTERVAL = SLIDE_DURATION + FADE_DURATION;
 const TOTAL_DURATION = IMAGES.length * SLIDE_INTERVAL; // plays through once, no loop
 const FADE_OUT_START = TOTAL_DURATION;                 // starts fading after last slide

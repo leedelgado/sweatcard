@@ -34,7 +34,8 @@
       "Bash(git commit -m 'Lighter gray body bg, remove time from sticker cards *)",
       "Bash(git commit -m 'Move Sessions title out of black header into gray body *)",
       "Bash(git commit -m 'Switch grid to left-right row order \\(CSS Grid, not columns\\) *)",
-      "Bash(git commit -m 'Fix ScaledCard overflow visible to restore white card border *)"
+      "Bash(git commit -m 'Fix ScaledCard overflow visible to restore white card border *)",
+      "Bash(git commit -m 'Speed up splash slideshow: 1.8s per image, 0.6s fade *)"
     ]
   }
 }
