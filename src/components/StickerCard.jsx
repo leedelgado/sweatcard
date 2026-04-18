@@ -58,7 +58,7 @@ export default function StickerCard({ workout }) {
 
         {/* Footer */}
         <div className={styles.footer}>
-          <span className={styles.appName}>SweatCard</span>
+          <span className={styles.appName}>Stat Shot</span>
         </div>
 
       </div>

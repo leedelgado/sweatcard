@@ -18,7 +18,10 @@
       "Bash(git commit -m 'Add text shadow to splash screen text for readability over photos *)",
       "Bash(git commit -m 'Remove gradient overlay from splash — text shadow only *)",
       "Bash(git commit -m 'Change splash wordmark color to white *)",
-      "Bash(git commit -m 'All splash text white *)"
+      "Bash(git commit -m 'All splash text white *)",
+      "WebFetch(domain:docs.google.com)",
+      "WebFetch(domain:doc-00-bk-docstext.googleusercontent.com)",
+      "Bash(git commit -m 'Rename SweatCard to Stat Shot throughout *)"
     ]
   }
 }

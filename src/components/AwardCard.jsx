@@ -21,7 +21,7 @@ export default function AwardCard({ award }) {
         )}
 
         <div className={styles.footer}>
-          <span className={styles.appName}>SweatCard</span>
+          <span className={styles.appName}>Stat Shot</span>
           <span className={styles.date}>{date}</span>
         </div>
 

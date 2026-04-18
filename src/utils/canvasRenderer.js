@@ -189,12 +189,12 @@ export async function renderCardToCanvas(workout) {
 
   const footerContentY = footerBorderY + 16;
 
-  // SWEATCARD wordmark
+  // STAT SHOT wordmark
   ctx.fillStyle = '#AEAEB2';
   ctx.font = '400 10px -apple-system, sans-serif';
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
-  ctx.fillText('SWEATCARD', cx + H_PAD, footerContentY);
+  ctx.fillText('STAT SHOT', cx + H_PAD, footerContentY);
 
   ctx.restore();
   return canvas;

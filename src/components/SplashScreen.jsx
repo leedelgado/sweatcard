@@ -55,7 +55,7 @@ export default function SplashScreen({ onDone }) {
 
       {/* Content pinned to bottom */}
       <div className={styles.content}>
-        <p className={styles.wordmark}>SweatCard</p>
+        <p className={styles.wordmark}>Stat Shot</p>
         <h1 className={styles.tagline}>Workout Sessions<br />into Stories.</h1>
         <p className={styles.sub}>Your Apple Watch data. Ready to share.</p>
       </div>
