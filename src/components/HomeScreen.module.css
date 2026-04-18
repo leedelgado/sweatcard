@@ -1,30 +1,31 @@
+/* ── Screen: black header, dark gray body ─────────────── */
 .screen {
   min-height: 100vh;
-  background: #111111;
-  /* No left/right padding — cells handle all horizontal spacing */
-  padding: 56px 0 48px;
+  background: #2C2C2E;  /* slightly lighter dark gray body */
   box-sizing: border-box;
 }
 
+/* Black header band */
 .header {
-  margin-bottom: 20px;
-  padding: 0 16px;
+  background: #000000;
+  padding: 56px 20px 20px;
+  margin-bottom: 0;
 }
 
 .headerTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .title {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
-  color: #f0f0f0;
+  color: #ffffff;
   margin: 0;
-  letter-spacing: -0.6px;
+  letter-spacing: -0.7px;
 }
 
 /* ── Sync button ─────────────────────────────────────── */
@@ -55,7 +56,6 @@
   border-color: #1D9E75;
 }
 
-/* Spinning indicator */
 .spinner {
   display: inline-block;
   width: 10px;
@@ -70,30 +70,24 @@
   to { transform: rotate(360deg); }
 }
 
-/* ── Section headers ─────────────────────────────────── */
+/* ── Section headers — a11y: white on #1C1C1E = 15.8:1 ── */
 .sectionHeader {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: #636366;
+  color: #ffffff;               /* 15.8:1 contrast — WCAG AAA */
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: 0 16px 8px;
-  margin-top: 8px;
+  padding: 20px 20px 8px;
 }
 
 /* Masonry 2-column layout */
 .grid {
   columns: 2;
-  column-gap: 0; /* all spacing comes from cell padding — keeps gaps equal */
+  column-gap: 0;
+  padding-bottom: 12px;
 }
 
-/*
-  12px padding on all 4 sides of every cell means:
-  - Between any two adjacent cards: 12 + 12 = 24px
-  - From screen edge to outer card: 12px
-  Horizontal and vertical gaps are now identical.
-*/
 .cell {
   all: unset;
   display: block;

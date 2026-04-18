@@ -32,7 +32,6 @@ export default function StickerCard({ workout }) {
           </div>
           <div className={styles.titleGroup}>
             <p className={styles.workoutType}>{workout.workoutType}</p>
-            <p className={styles.metaTime}>{timeRange}</p>
           </div>
         </div>
 
