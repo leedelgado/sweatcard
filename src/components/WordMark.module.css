@@ -1,0 +1,25 @@
+.mark {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  letter-spacing: -0.03em;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* ── Sizes ───────────────────────────────────────────── */
+.sm  { font-size: 13px; }
+.md  { font-size: 22px; }
+.lg  { font-size: 42px; }
+
+/* ── Weights ─────────────────────────────────────────── */
+.heavy {
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+}
+
+.light {
+  font-weight: 200;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  opacity: 0.85;
+}

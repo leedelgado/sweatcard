@@ -7,7 +7,6 @@
   flex-direction: column;
   cursor: pointer;
   transition: opacity 0.5s ease;
-  /* Constrain to the same max-width as the app */
   max-width: 430px;
   margin: 0 auto;
 }
@@ -17,14 +16,13 @@
   pointer-events: none;
 }
 
-/* ── Hero image ──────────────────────────────────────── */
+/* ── Hero images ─────────────────────────────────────── */
 .heroWrap {
   position: absolute;
   inset: 0;
   overflow: hidden;
 }
 
-/* All images stacked — only the active one fades in */
 .hero {
   position: absolute;
   inset: 0;
@@ -37,22 +35,7 @@
   transition: opacity 0.6s ease;
 }
 
-.heroActive {
-  opacity: 1;
-}
-
-/* Gradient: transparent top → black bottom so text pops */
-.gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(0, 0, 0, 0.0) 30%,
-    rgba(0, 0, 0, 0.6) 60%,
-    rgba(0, 0, 0, 0.95) 100%
-  );
-}
+.heroActive { opacity: 1; }
 
 /* ── Bottom content ──────────────────────────────────── */
 .content {
@@ -60,39 +43,33 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0 28px 52px;
+  padding: 0 28px 56px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
-.wordmark {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: #ffffff;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin: 0;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+.logo {
+  text-shadow: 0 2px 16px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.8);
 }
 
 .tagline {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
-  font-size: 38px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
   color: #ffffff;
   margin: 0;
-  line-height: 1.05;
-  letter-spacing: -1px;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
   text-shadow: 0 2px 12px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.8);
 }
 
 .sub {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   color: #ffffff;
-  margin: 4px 0 0;
+  opacity: 0.7;
+  margin: 0;
   text-shadow: 0 1px 6px rgba(0,0,0,0.9);
 }

@@ -127,7 +127,7 @@ export async function renderAwardToCanvas(award) {
   ctx.font = '400 10px -apple-system, sans-serif';
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
-  ctx.fillText('STAT SHOT', cx + H_PAD, contentY);
+  ctx.fillText('STATSHOT', cx + H_PAD, contentY);
 
   ctx.fillStyle = '#636366';
   ctx.font = '400 12px -apple-system, sans-serif';

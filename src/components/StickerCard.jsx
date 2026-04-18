@@ -1,5 +1,6 @@
 import styles from './StickerCard.module.css';
 import { getStats, formatTimeRange } from '../utils/formatStats';
+import WordMark from './WordMark';
 
 const WORKOUT_EMOJI = {
   strength:       '🏋️',
@@ -58,7 +59,7 @@ export default function StickerCard({ workout }) {
 
         {/* Footer */}
         <div className={styles.footer}>
-          <span className={styles.appName}>Stat Shot</span>
+          <WordMark size="sm" />
         </div>
 
       </div>

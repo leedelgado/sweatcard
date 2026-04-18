@@ -21,7 +21,8 @@
       "Bash(git commit -m 'All splash text white *)",
       "WebFetch(domain:docs.google.com)",
       "WebFetch(domain:doc-00-bk-docstext.googleusercontent.com)",
-      "Bash(git commit -m 'Rename SweatCard to Stat Shot throughout *)"
+      "Bash(git commit -m 'Rename SweatCard to Stat Shot throughout *)",
+      "Bash(git commit -m 'Rebrand to StatShot with custom wordmark component *)"
     ]
   }
 }

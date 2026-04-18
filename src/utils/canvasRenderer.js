@@ -189,12 +189,12 @@ export async function renderCardToCanvas(workout) {
 
   const footerContentY = footerBorderY + 16;
 
-  // STAT SHOT wordmark
+  // STATSHOT wordmark
   ctx.fillStyle = '#AEAEB2';
   ctx.font = '400 10px -apple-system, sans-serif';
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
-  ctx.fillText('STAT SHOT', cx + H_PAD, footerContentY);
+  ctx.fillText('STATSHOT', cx + H_PAD, footerContentY);
 
   ctx.restore();
   return canvas;

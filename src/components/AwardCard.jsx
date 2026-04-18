@@ -1,5 +1,6 @@
 import styles from './AwardCard.module.css';
 import { formatDate } from '../utils/formatStats';
+import WordMark from './WordMark';
 
 export default function AwardCard({ award }) {
   const date = formatDate(award.earnedDate);
@@ -21,7 +22,7 @@ export default function AwardCard({ award }) {
         )}
 
         <div className={styles.footer}>
-          <span className={styles.appName}>Stat Shot</span>
+          <WordMark size="sm" />
           <span className={styles.date}>{date}</span>
         </div>
 

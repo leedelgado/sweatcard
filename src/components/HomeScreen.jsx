@@ -2,6 +2,7 @@ import styles from './HomeScreen.module.css';
 import StickerCard from './StickerCard';
 import AwardCard from './AwardCard';
 import ScaledCard from './ScaledCard';
+import WordMark from './WordMark';
 
 function buildFeed(workouts, awards) {
   const items = [
@@ -17,6 +18,7 @@ export default function HomeScreen({ workouts, awards, onSelect }) {
   return (
     <main className={styles.screen}>
       <header className={styles.header}>
+        <WordMark size="md" />
         <h1 className={styles.title}>Sessions</h1>
       </header>
 
