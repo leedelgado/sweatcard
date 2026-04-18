@@ -8,6 +8,9 @@ export const WORKOUT_CONFIG = {
   elliptical: {
     stats: ['durationSeconds', 'activeCalories', 'totalCalories', 'avgHeartRate'],
   },
+  basketball: {
+    stats: ['durationSeconds', 'activeCalories', 'totalCalories', 'avgHeartRate'],
+  },
   running: {
     stats: ['durationSeconds', 'totalDistanceMiles', 'activeCalories', 'totalCalories', 'avgHeartRate', 'avgPace'],
   },

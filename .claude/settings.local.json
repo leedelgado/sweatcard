@@ -28,7 +28,8 @@
       "Bash(git commit -m 'Add onboarding flow: HealthKit permission + social handles *)",
       "Bash(git commit -m 'Add Sync button to Sessions header + update onboarding *)",
       "Bash(git commit -m 'Always show onboarding on load for demo *)",
-      "Bash(git commit -m 'Divide Sessions into Today/Past sections + Sync adds a new card *)"
+      "Bash(git commit -m 'Divide Sessions into Today/Past sections + Sync adds a new card *)",
+      "Bash(git commit -m 'Add Basketball workout card matching screenshot stats *)"
     ]
   }
 }

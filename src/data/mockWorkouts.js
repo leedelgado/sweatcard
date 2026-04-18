@@ -35,6 +35,20 @@ const mockWorkouts = [
 
   // ── Past ────────────────────────────────────────────
   {
+    id: 'workout_basketball',
+    workoutType: 'Basketball',
+    workoutTypeKey: 'basketball',
+    startDate: '2026-04-17T23:38:00Z',
+    endDate:   '2026-04-18T01:42:00Z',
+    durationSeconds: 7270,
+    activeCalories: 1782,
+    totalCalories: 2082,
+    avgHeartRate: 136,
+    maxHeartRate: 164,
+    totalDistanceMiles: 0,
+    source: 'Apple Watch Series 9',
+  },
+  {
     id: 'workout_003',
     workoutType: 'Traditional Strength Training',
     workoutTypeKey: 'strength',

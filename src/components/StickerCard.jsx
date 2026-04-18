@@ -8,6 +8,7 @@ const WORKOUT_EMOJI = {
   elliptical:     '🏃',
   running:        '🏃',
   walking:        '🚶',
+  basketball:     '🏀',
 };
 
 export default function StickerCard({ workout }) {
