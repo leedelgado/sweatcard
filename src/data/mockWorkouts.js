@@ -1,7 +1,41 @@
 // Mock workout history — simulates recent Apple Watch workouts
 const mockWorkouts = [
+  // ── Today (Apr 18) ──────────────────────────────────
   {
     id: 'workout_001',
+    workoutType: 'Elliptical',
+    workoutTypeKey: 'elliptical',
+    startDate: '2026-04-18T08:18:00Z',
+    endDate: '2026-04-18T08:48:00Z',
+    durationSeconds: 1802,
+    activeCalories: 223,
+    totalCalories: 266,
+    avgHeartRate: 130,
+    maxHeartRate: 152,
+    totalDistanceMiles: 0,
+    source: 'Apple Watch Series 9',
+  },
+  {
+    id: 'workout_002',
+    workoutType: 'Outdoor Walk',
+    workoutTypeKey: 'walking',
+    startDate: '2026-04-18T08:50:00Z',
+    endDate: '2026-04-18T09:01:00Z',
+    durationSeconds: 685,
+    activeCalories: 41,
+    totalCalories: 58,
+    avgHeartRate: 115,
+    maxHeartRate: 122,
+    totalDistanceMiles: 0.58,
+    stepCount: 1280,
+    elevationGainFt: 36,
+    avgPaceMinsPerMile: 19.57,
+    source: 'Apple Watch Series 9',
+  },
+
+  // ── Past ────────────────────────────────────────────
+  {
+    id: 'workout_003',
     workoutType: 'Traditional Strength Training',
     workoutTypeKey: 'strength',
     startDate: '2026-04-15T07:20:00Z',
@@ -12,37 +46,6 @@ const mockWorkouts = [
     avgHeartRate: 120,
     maxHeartRate: 158,
     totalDistanceMiles: 0,
-    source: 'Apple Watch Series 9',
-  },
-  {
-    id: 'workout_002',
-    workoutType: 'Elliptical',
-    workoutTypeKey: 'elliptical',
-    startDate: '2026-04-15T08:18:00Z',
-    endDate: '2026-04-15T08:48:00Z',
-    durationSeconds: 1802,
-    activeCalories: 223,
-    totalCalories: 266,
-    avgHeartRate: 130,
-    maxHeartRate: 152,
-    totalDistanceMiles: 0,
-    source: 'Apple Watch Series 9',
-  },
-  {
-    id: 'workout_003',
-    workoutType: 'Outdoor Walk',
-    workoutTypeKey: 'walking',
-    startDate: '2026-04-15T08:50:00Z',
-    endDate: '2026-04-15T09:01:00Z',
-    durationSeconds: 685,
-    activeCalories: 41,
-    totalCalories: 58,
-    avgHeartRate: 115,
-    maxHeartRate: 122,
-    totalDistanceMiles: 0.58,
-    stepCount: 1280,
-    elevationGainFt: 36,
-    avgPaceMinsPerMile: 19.57,
     source: 'Apple Watch Series 9',
   },
   {
@@ -89,5 +92,22 @@ const mockWorkouts = [
     source: 'Apple Watch Series 9',
   },
 ];
+
+// The workout that appears when user taps Sync — simulates a new pull from HealthKit
+export const syncedWorkout = {
+  id: 'workout_synced',
+  workoutType: 'Outdoor Run',
+  workoutTypeKey: 'running',
+  startDate: '2026-04-18T06:15:00Z',
+  endDate: '2026-04-18T06:53:00Z',
+  durationSeconds: 2280,
+  activeCalories: 412,
+  totalCalories: 489,
+  avgHeartRate: 158,
+  maxHeartRate: 181,
+  totalDistanceMiles: 4.09,
+  avgPaceMinsPerMile: 9.28,
+  source: 'Apple Watch Series 9',
+};
 
 export default mockWorkouts;

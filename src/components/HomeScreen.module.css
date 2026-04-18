@@ -70,6 +70,18 @@
   to { transform: rotate(360deg); }
 }
 
+/* ── Section headers ─────────────────────────────────── */
+.sectionHeader {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #636366;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0 16px 8px;
+  margin-top: 8px;
+}
+
 /* Masonry 2-column layout */
 .grid {
   columns: 2;
