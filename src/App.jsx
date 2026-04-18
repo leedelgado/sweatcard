@@ -4,12 +4,14 @@ import StickerCard from './components/StickerCard';
 import AwardCard from './components/AwardCard';
 import ScaledCard from './components/ScaledCard';
 import SplashScreen from './components/SplashScreen';
+import OnboardingFlow from './components/OnboardingFlow';
 import { useExport } from './hooks/useExport';
 import mockWorkouts from './data/mockWorkouts';
 import mockAwards from './data/mockAwards';
 import './App.css';
 
 export default function App() {
+  const [onboarded, setOnboarded]   = useState(() => !!localStorage.getItem('statshot_onboarded'));
   const [splashDone, setSplashDone] = useState(false);
   // selected = { type: 'workout'|'award', data: {...} }
   const [selected, setSelected] = useState(null);
@@ -19,6 +21,10 @@ export default function App() {
     copySticker,   copying,   copiedDone,
     error,
   } = useExport();
+
+  if (!onboarded) {
+    return <OnboardingFlow onDone={() => setOnboarded(true)} />;
+  }
 
   if (!splashDone) {
     return <SplashScreen onDone={() => setSplashDone(true)} />;

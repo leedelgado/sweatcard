@@ -1,0 +1,165 @@
+.screen {
+  min-height: 100vh;
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  padding: 0 28px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+/* ── Sections ────────────────────────────────────────── */
+.top {
+  padding-top: 64px;
+  padding-bottom: 8px;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.bottom {
+  padding-bottom: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Icon ────────────────────────────────────────────── */
+.iconWrap {
+  width: 72px;
+  height: 72px;
+  background: #1C1C1E;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+/* ── Text ────────────────────────────────────────────── */
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin: 0;
+  letter-spacing: -0.6px;
+  line-height: 1.1;
+}
+
+.body {
+  font-size: 15px;
+  font-weight: 400;
+  color: #AEAEB2;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Permission list ─────────────────────────────────── */
+.permList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+  background: #1C1C1E;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.permRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #f0f0f0;
+  font-weight: 400;
+}
+
+.check {
+  font-size: 13px;
+  color: #1D9E75;
+  font-weight: 700;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+/* ── Form ────────────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #636366;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.input {
+  background: #1C1C1E;
+  border: 1px solid #3A3A3C;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #f0f0f0;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+
+.input::placeholder { color: #48484A; }
+.input:focus { border-color: #1D9E75; }
+
+/* ── Buttons ─────────────────────────────────────────── */
+.primary {
+  width: 100%;
+  padding: 16px;
+  background: #ffffff;
+  color: #111111;
+  border: none;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.primary:active { opacity: 0.85; }
+
+.ghost {
+  width: 100%;
+  padding: 14px;
+  background: none;
+  color: #636366;
+  border: none;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ghost:active { opacity: 0.6; }
