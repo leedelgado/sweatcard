@@ -11,7 +11,7 @@ import mockAwards from './data/mockAwards';
 import './App.css';
 
 export default function App() {
-  const [onboarded, setOnboarded]   = useState(() => !!localStorage.getItem('statshot_onboarded'));
+  const [onboarded, setOnboarded]   = useState(false);
   const [splashDone, setSplashDone] = useState(false);
   // selected = { type: 'workout'|'award', data: {...} }
   const [selected, setSelected] = useState(null);

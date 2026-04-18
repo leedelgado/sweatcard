@@ -108,7 +108,6 @@ export default function OnboardingFlow({ onDone }) {
     if (step < 1) {
       setStep(step + 1);
     } else {
-      localStorage.setItem('statshot_onboarded', '1');
       onDone();
     }
   }
