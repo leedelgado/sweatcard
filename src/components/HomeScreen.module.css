@@ -82,10 +82,11 @@
   padding: 20px 20px 8px;
 }
 
-/* Masonry 2-column layout */
+/* 2-column grid — fills left→right, row by row */
 .grid {
-  columns: 2;
-  column-gap: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;   /* each cell is only as tall as its card */
   padding-bottom: 12px;
 }
 
@@ -96,8 +97,6 @@
   width: 100%;
   box-sizing: border-box;
   padding: 12px;
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
   -webkit-tap-highlight-color: transparent;
 }
 
