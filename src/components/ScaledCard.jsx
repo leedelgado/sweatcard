@@ -1,14 +1,14 @@
 import { useRef, useState, useEffect } from 'react';
 
 /**
- * Renders children at their natural size, then scales them down
- * to fill the container width — while telling the layout exactly
- * how tall the result is so nothing overlaps.
+ * Scales children to fill the container width.
+ * Uses position:absolute on the inner card so its 390px layout width
+ * never bleeds into the parent grid — only the scaled visual output shows.
  */
 export default function ScaledCard({ children }) {
   const outerRef = useRef(null);
   const innerRef = useRef(null);
-  const [style, setStyle] = useState({ height: 'auto' });
+  const [dims, setDims] = useState({ height: 0, scale: 1 });
 
   useEffect(() => {
     const outer = outerRef.current;
@@ -17,12 +17,11 @@ export default function ScaledCard({ children }) {
 
     function update() {
       const outerW = outer.offsetWidth;
-      const innerW = inner.offsetWidth;  // card's natural width (390px)
-      if (!innerW) return;
+      const innerW = inner.offsetWidth;
+      const innerH = inner.offsetHeight;
+      if (!innerW || !innerH) return;
       const scale = outerW / innerW;
-      const scaledH = inner.offsetHeight * scale;
-      setStyle({ height: scaledH });
-      inner.style.transform = `scale(${scale})`;
+      setDims({ height: Math.ceil(innerH * scale), scale });
     }
 
     update();
@@ -32,8 +31,21 @@ export default function ScaledCard({ children }) {
   }, [children]);
 
   return (
-    <div ref={outerRef} style={{ width: '100%', ...style, overflow: 'visible' }}>
-      <div ref={innerRef} style={{ transformOrigin: 'top left', display: 'inline-block' }}>
+    <div
+      ref={outerRef}
+      style={{ width: '100%', height: dims.height, position: 'relative', overflow: 'visible' }}
+    >
+      <div
+        ref={innerRef}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          transformOrigin: 'top left',
+          transform: `scale(${dims.scale})`,
+          display: 'inline-block',
+        }}
+      >
         {children}
       </div>
     </div>
