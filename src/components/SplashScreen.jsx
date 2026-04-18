@@ -2,26 +2,33 @@ import { useEffect, useState } from 'react';
 import styles from './SplashScreen.module.css';
 import WordMark from './WordMark';
 
-const IMAGES = ['/hero1.png', '/hero2.png', '/hero3.png'];
-const SLIDE_DURATION = 3000;
-const FADE_DURATION  = 800;
-const TOTAL_STAY     = IMAGES.length * (SLIDE_DURATION + FADE_DURATION);
-const FADE_OUT_START = TOTAL_STAY + 600;
+const IMAGES = ['/hero1.png', '/hero2.png', '/hero3.png', '/hero4.png'];
+const SLIDE_DURATION = 3000;  // ms each image is fully visible
+const FADE_DURATION  = 800;   // ms crossfade
+const SLIDE_INTERVAL = SLIDE_DURATION + FADE_DURATION;
+const TOTAL_DURATION = IMAGES.length * SLIDE_INTERVAL; // plays through once, no loop
+const FADE_OUT_START = TOTAL_DURATION;                 // starts fading after last slide
 const DONE_DELAY     = FADE_OUT_START + 600;
 
 export default function SplashScreen({ onDone }) {
   const [activeIdx, setActiveIdx] = useState(0);
-  const [fading, setFading] = useState(false);
+  const [fading, setFading]       = useState(false);
 
+  // Advance through images once — stop at the last one, never loop back
   useEffect(() => {
     let idx = 0;
     const interval = setInterval(() => {
-      idx = (idx + 1) % IMAGES.length;
+      idx += 1;
+      if (idx >= IMAGES.length) {
+        clearInterval(interval); // hold on last image, no loop → no glitch
+        return;
+      }
       setActiveIdx(idx);
-    }, SLIDE_DURATION + FADE_DURATION);
+    }, SLIDE_INTERVAL);
     return () => clearInterval(interval);
   }, []);
 
+  // Fade out the whole splash then hand off to the app
   useEffect(() => {
     const fadeTimer = setTimeout(() => setFading(true), FADE_OUT_START);
     const doneTimer = setTimeout(() => onDone(), DONE_DELAY);
